@@ -1,0 +1,71 @@
+<head>
+  <title>countmein-simple</title>
+</head>
+
+<body>
+  
+<div class="page-header">
+  <h1>Count me in <small>when you have something fun ;) </small></h1>
+</div>
+  <div class="container">
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Why not join us?</h3>
+        </div>
+        <div class="panel-body">
+          {{> addCustomers}}
+        </div>
+    </div>
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Who is with us?(last 20)</h3>
+        </div>
+        <div class="panel-body">
+          {{#each customers}}
+            {{> customer}}
+
+          {{/each}}
+        </div>
+    </div>
+
+
+
+  </div>
+
+
+
+</body>
+
+
+
+
+<template name="addCustomers">
+
+  <label for="inputUsername" class="col-sm-2">Your name:</label>
+  <input type="text" name="username" id="inputUsername" class="form-control" value="" required="required" pattern="" title="">
+
+  <label for="inputUseremail" class="col-sm-2">Your email:</label>
+  <input type="email" name="useremail" id="inputUseremail" class="form-control" value="" required="required" title="">
+
+    <p>
+  <button type="button" class="btn btn-primary" id="btnCountMeIn">Count me in</button>
+  </p>
+</template>
+
+<template name="customer">
+
+<li>
+<div class="list-group">
+  <!-- <a href="#" class="list-group-item active"> -->
+    <h4 class="list-group-item-heading"><span> {{name}}</span></h4>
+    <p class="list-group-item-text"><span>{{email}}</span> </p>
+  <!-- </a> -->
+</div>
+
+    
+</li>
+
+</template>
