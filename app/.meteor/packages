@@ -22,3 +22,5 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 bootstrap
 kadira:flow-router
 kadira:blaze-layout
+
+aldeed:collection2
