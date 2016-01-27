@@ -1,7 +1,13 @@
 <template name="customers">
-    <h1>Customer list goes here</h1>
+
 
     {{> newCustomer }}
 
+    <h1>Customer list goes here</h1>
 
+    {{#each customers }}
+
+        {{> customer }}
+
+    {{/each}}
 </template>
