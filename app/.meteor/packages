@@ -24,3 +24,6 @@ kadira:flow-router
 kadira:blaze-layout
 
 aldeed:collection2
+aldeed:autoform
+
+msavin:mongol

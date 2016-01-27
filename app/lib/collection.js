@@ -1,5 +1,11 @@
 Customers = new Mongo.Collection('customers');
 
+Customers.allow({
+    insert : function() {
+        return true;
+    }
+});
+
 var Schemas = {};
 
 Schemas.Customer = new SimpleSchema({
@@ -16,6 +22,9 @@ Schemas.Customer = new SimpleSchema({
         type: Date,
         autoValue : function(){
             return new Date();
+        },
+        autoform : {
+            type : 'hidden'
         }
     }
 
