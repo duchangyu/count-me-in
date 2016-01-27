@@ -4,14 +4,14 @@
     {{> newCustomer }}
 
     <h1>Customer list goes here</h1>
-    {{#if Tempate.subscriptionsReady}}
+    {{#if Template.subscriptionsReady}}
         {{#each customers }}
 
             {{> customer }}
 
         {{/each}}
     {{else}}
-        <p>加载中</p>
+        <p>加载中...</p>
     {{/if}}
 
 </template>
