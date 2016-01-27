@@ -10,8 +10,13 @@ Template.customers.onCreated(function() {
 
 Template.customers.helpers({
     customers : function(){
+        var options = {
+            sort : {
+                createAt : -1
+            }
+        }
 
-        return Customers.find({},{sort : {createAt : -1}});
+        return Customers.find({},options);
     }
 
 });
